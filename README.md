@@ -1,4 +1,4 @@
-# Solomon Agyire - Portfolio
+#Portfolio
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS, showcasing my projects, experience, and skills in software development and AI/ML engineering.
 
