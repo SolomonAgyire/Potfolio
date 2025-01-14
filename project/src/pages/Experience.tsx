@@ -49,7 +49,7 @@ export function Experience() {
             period: "June 2024",
             description: "Implemented machine learning algorithms for binary and unsupervised classification at the FRIB facility. Mentored high school students in conducting research projects, fostering the next generation of scientists in nuclear physics and data analysis.",
             technologies: ["Machine Learning", "Python", "Data Analysis", "Mentoring"],
-            image: "/src/img/PING.png",
+            image: "/img/PING.png",
             hasDetails: true,
             detailsLink: "https://frib.msu.edu/for-students/programs/ping",
             isExternal: true
@@ -62,7 +62,7 @@ export function Experience() {
             period: "May 2024",
             description: "I participated in the Edge AI Summer Program, where I explored the innovative potential of Edge AI in medical devices. The program focused on embedding artificial intelligence into devices to analyze data and deliver real-time feedback, with applications such as diabetes monitoring systems..",
             technologies: ["Google-Gemini API", "Svelte", "Tailwind CSS", "Team Leadership", "AI Development"],
-            image: "/src/img/edgeai.png",
+            image: "/img/edgeai.png",
             hasDetails: true,
             detailsLink: "/edge-ai-project",
             githubLink: "https://github.com/Chee-ChuanFoo/Generative_AI_Hackathon"
@@ -75,7 +75,7 @@ export function Experience() {
             period: "February 2024 - Present",
             description: "Assist students weekly with Calculus I and also in brainstorming and refining their academic essays, jobs, and internship applications.",
             technologies: ["Calculus Tutoring", "Writing Assistance", "Academic Mentoring", "Student Success"],
-            image: "/src/img/tan.png",
+            image: "/img/tan.png",
             hasDetails: true,
             detailsLink: "https://www.aamu.edu/academics/academic-support-retention/freshman-academy/tutorial-assistance-network/",
             isExternal: true
