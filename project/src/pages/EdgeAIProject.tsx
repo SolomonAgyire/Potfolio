@@ -71,7 +71,7 @@ export function EdgeAIProject() {
                     >
                         <div className="aspect-video relative overflow-hidden">
                             <img 
-                                src="/src/img/Therapybot.png"
+                                src="/img/Therapybot.png"
                                 alt="Therapy Bot Interface"
                                 className="w-full h-full object-cover"
                             />

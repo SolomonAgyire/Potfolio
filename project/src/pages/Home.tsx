@@ -9,7 +9,7 @@ export function Home() {
       id: 1,
       title: "Computer Performance Metrics",
       description: "Analyzed computer performance metrics using Random Forest modeling and Python scripts, achieving an R-squared value of 0.729 to highlight the impact of network and disk I/O on system performance.",
-      image: "/src/img/computer performance matrix.jpg",
+      image: "/img/computer performance matrix.jpg",
       technologies: ["Python", "Random Forest", "Data Analysis"],
       link: "https://github.com/SolomonAgyire/Computer-Performance",
       preview: "#"
@@ -18,7 +18,7 @@ export function Home() {
       id: 2,
       title: "Real-Time Disaster Analysis with NLP",
       description: "A real-time ongoing disaster analysis system, providing timely relief information by analyzing disaster-related tweets and expanding to multiple platforms.",
-      image: "src/img/Disaster Relief.jpg",
+      image: "/img/Disaster Relief.jpg",
       technologies: ["Python", "TensorFlow", "React", "D3.js"],
       link: "https://colab.research.google.com/drive/1dY_9upIpiWWk2DY4GlRuzBu52bbIl3eb?authuser=1",
       preview: "/disaster-project"
@@ -27,7 +27,7 @@ export function Home() {
       id: 3,
       title: "Website Saver Chrome Extension",
       description: "A Chrome extension that allows users to save important websites they visit while browsing. Users can easily revisit saved sites or delete them to keep track of essential pages, enhancing web browsing organization and efficiency.",
-      image: "/src/img/chrome extension.jpg",
+      image: "/img/chrome extension.jpg",
       technologies: ["Javascript", "Chrome Extension API", "HTML", "CSS"],
       link: "https://github.com/SolomonAgyire/Chrome-Extension-",
       preview: "#"
@@ -39,7 +39,7 @@ export function Home() {
       id: 1,
       title: "Gemini AI Hackathon",
       description: "Led a team of 3 in developing an AI solution using Google Gemini API for automated invoice processing, achieving 10% accuracy improvement in data extraction within a week.",
-      image: "/src/img/Gemini.png",
+      image: "/img/Gemini.png",
       technologies: ["Python", "Gemini API", "AI/ML", "OCR"],
       link: "https://github.com/Chee-ChuanFoo/Generative_AI_Hackathon",
       preview: "#",
@@ -50,7 +50,7 @@ export function Home() {
       id: 2,
       title: "MasterCard DataChallenge",
       description: "Developed a machine learning model that predicts and optimizes inclusive growth scores across strategic locations. The solution helps identify areas for community development investment and addresses economic disparities through data-driven insights.",
-      image: "/src/img/Mastercard.jpg",
+      image: "/img/Mastercard.jpg",
       technologies: ["Python", "Pandas", "Data Visualization", "Data Science", "Machine Learning"],
       link: "https://colab.research.google.com/drive/17a2kLXMtx5JR5ot0l0t0hP2trJw09rh6",
       preview: "#",
@@ -61,7 +61,7 @@ export function Home() {
       id: 3,
       title: "HP FOWA HBCU Challenge",
       description: "Fine-tuned a GPT-powered chatbot designed to assist HBCU students in finding and applying for scholarships. Collaborated with a multidisciplinary team to improve scholarship application success rates by 20% through personalized assistance.",
-      image: "/src/img/hp.png",
+      image: "/img/hp.png",
       technologies: ["Prompt Engineering", "GPT-4", "Chatbot"],
       link: "#",
       preview: "#"
@@ -120,7 +120,7 @@ export function Home() {
       title: "Membership Chair",
       organization: "AAMU ACM Chapter",
       description: "Manage membership activities and engagement for the ACM-AAMU chapter, organizing 4 events per semester to increase member involvement.",
-      image: "/src/img/ACM.png",
+      image: "/img/ACM.png",
       link: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAC055_sBH3TuMlgEm9O62sJaaDtsoMbU9Uw&keywords=aamu%20acm&origin=RICH_QUERY_SUGGESTION&position=0&searchId=ed76651a-7d7f-4ab5-891d-988101814936&sid=1%2Ci&spellCorrectionEnabled=false",
       period: "January 2024 - Present"
     },
@@ -129,7 +129,7 @@ export function Home() {
       title: "Undergraduate Program Manager",
       organization: "Education Abroad",
       description: "Organize 12 free workshops and sessions annually to assist high school students in applying for schools and scholarships outside Ghana.",
-      image: "/src/img/EducationUSA.png",
+      image: "/img/EducationUSA.png",
       link: "https://educationabroad.org",
       period: "January 2024 - Present"
     },
@@ -138,7 +138,7 @@ export function Home() {
       title: "Events and Engagement Manager",
       organization: "Google Developer Student Club",
       description: "Plan and manage events for the Google Developers Student Club, connecting members with professional mentors to support career development.",
-      image: "/src/img/GDSC.png",
+      image: "/img/GDSC.png",
       link: "https://www.linkedin.com/in/gdsc-aamu/recent-activity/all/",
       period: "August 2024 - Present"
     }
@@ -178,7 +178,7 @@ export function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-rose-500 rounded-2xl transform -rotate-6 blur-xl opacity-50 animate-pulse delay-300"></div>
               <div className="relative h-full rounded-2xl overflow-hidden border-2 border-white/10 backdrop-blur-sm">
                 <img
-                  src="/src/img/Solomon headshot.jpg"
+                  src="/img/Solomon headshot.jpg"
                   alt="Solomon"
                   className="w-full h-full object-cover"
                 />
@@ -209,7 +209,7 @@ export function Home() {
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <Link
-                  to="/projects"
+                  to="/experience"
                   className="group relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl overflow-hidden transition-all duration-300 hover:scale-105"
                 >
                   <div className="absolute inset-0 bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>

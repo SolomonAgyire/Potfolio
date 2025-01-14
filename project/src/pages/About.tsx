@@ -9,7 +9,7 @@ export function About() {
       date: "September 2024",
       location: "San Diego, CA",
       role: "Attendee",
-      image: "/src/img/Tapia.png"
+      image: "/img/Tapia.png"
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ export function About() {
       date: "November 2024",
       location: "Houston, TX",
       role: "Participant",
-      image: "/src/img/NSBPNSHP.jpeg"
+      image: "/img/NSBPNSHP.jpeg"
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ export function About() {
       date: "August 2024",
       location: "San Jose, CA",
       role: "Attendee",
-      image: "/src/img/Colorstack.png"
+      image: "/img/Colorstack.png"
     },
     {
       id: 4,
@@ -33,7 +33,7 @@ export function About() {
       date: "November 2023",
       location: "Indianapolis, IN",
       role: "Presenter",
-      image: "/src/img/Lilly.png"
+      image: "/img/Lilly.png"
     }
   ];
 
@@ -59,14 +59,14 @@ export function About() {
                 <div className="relative lg:w-1/3">
                   <div className="aspect-square rounded-2xl overflow-hidden border-2 border-white/10">
                     <img
-                      src="\src\img\King.jpg"
+                      src="/img/King.jpg"
                       alt="Profile"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full overflow-hidden border-4 border-black">
                     <img
-                      src="\src\img\SolomonSnow.jpg"
+                      src="/img/SolomonSnow.jpg"
                       alt="Secondary Profile"
                       className="w-full h-full object-cover"
                     />
