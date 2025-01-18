@@ -209,7 +209,7 @@ export function Home() {
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <Link
-                  to="/projects"
+                  to="/experience"
                   className="group relative px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl overflow-hidden transition-all duration-300 hover:scale-105"
                 >
                   <div className="absolute inset-0 bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
