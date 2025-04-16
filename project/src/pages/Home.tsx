@@ -2,6 +2,7 @@
 import { ArrowRight, ChevronDown, Award, ExternalLink, Github, Code, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { Project, Achievement, Leadership } from '../types';
+import { useRef, useEffect } from 'react';
 
 export function Home() {
   const projects: Project[] = [
@@ -16,7 +17,7 @@ export function Home() {
     },
     {
       id: 2,
-      title: "Real-Time Disaster Analysis with NLP",
+      title: "Real-Time Disaster Analysis with NLP and Social Media",
       description: "A real-time ongoing disaster analysis system, providing timely relief information by analyzing disaster-related tweets and expanding to multiple platforms.",
       image: "/img/Disaster Relief.jpg",
       technologies: ["Python", "TensorFlow", "React", "D3.js"],
@@ -25,7 +26,7 @@ export function Home() {
     },
     {
       id: 3,
-      title: "Website Saver Chrome Extension",
+      title: "BrowseCap Chrome Extension",
       description: "A Chrome extension that allows users to save important websites they visit while browsing. Users can easily revisit saved sites or delete them to keep track of essential pages, enhancing web browsing organization and efficiency.",
       image: "/img/chrome extension.jpg",
       technologies: ["Javascript", "Chrome Extension API", "HTML", "CSS"],
@@ -50,7 +51,7 @@ export function Home() {
       id: 2,
       title: "MasterCard DataChallenge",
       description: "Developed a machine learning model that predicts and optimizes inclusive growth scores across strategic locations. The solution helps identify areas for community development investment and addresses economic disparities through data-driven insights.",
-      image: "/img/Mastercard.jpg",
+      image: "/img/MasterCard.jpg",
       technologies: ["Python", "Pandas", "Data Visualization", "Data Science", "Machine Learning"],
       link: "https://colab.research.google.com/drive/17a2kLXMtx5JR5ot0l0t0hP2trJw09rh6",
       preview: "#",
@@ -90,7 +91,13 @@ export function Home() {
       description: "Won first place at Alabama A&M University's STEM Research Presentation Competition",
       icon: "trophy"
     },
-    
+    {
+      id: 6,
+      title: "2X Second Place Winner at Innovate Alabama App Build",
+      date: "January 2024 & March 2024",
+      description: "Won second place twice at the Innovate Alabama App Build competition.",
+      icon: "award"
+    },
     {
       id: 4,
       title: "Eli Lilly HBCU-Day Presenter",
@@ -104,13 +111,6 @@ export function Home() {
       date: "August 2023-Present",
       description: "Recognized as a Presidential Scholar and Honoree at Alabama A&M University",
       icon: "star"
-    },
-    {
-      id: 6,
-      title: "Honors Scholar",
-      date: "August 2023-Present",
-      description: "Member of the AAMU Honors Program, maintaining academic excellence and leadership",
-      icon: "award"
     }
   ];
 
@@ -125,15 +125,6 @@ export function Home() {
       period: "January 2024 - Present"
     },
     {
-      id: 2,
-      title: "Undergraduate Program Manager",
-      organization: "Education Abroad",
-      description: "Organize 12 free workshops and sessions annually to assist high school students in applying for schools and scholarships outside Ghana.",
-      image: "/img/EducationUSA.png",
-      link: "https://educationabroad.org",
-      period: "January 2024 - Present"
-    },
-    {
       id: 3,
       title: "Events and Engagement Manager",
       organization: "Google Developer Student Club",
@@ -143,6 +134,42 @@ export function Home() {
       period: "August 2024 - Present"
     }
   ];
+
+  const highlights = [
+    { image: "/Highlights/AppBuild.jpg", text: "Innovate Alabama App Build" },
+    { image: "/Highlights/firstday.jpg", text: "First Day in the US" },
+    { image: "/Highlights/medalion.jpg", text: "Presidential Medalion at AAMU" },
+    { image: "/Highlights/tmcf.jpg", text: "TMCF Pitch 2024" },
+    { image: "/Highlights/hackathon.jpg", text: "Entrepreneurship Hackathon" },
+    { image: "/Highlights/firstsnow.jpg", text: "First Snow" },
+    { image: "/Highlights/Botanicalgardening.jpg", text: "Gardening" }
+  ];
+
+  // Infinite auto-scroll for highlights
+  const highlightsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const container = highlightsRef.current;
+    if (!container) return;
+    let running = true;
+    let animationFrame: number;
+    const CARD_WIDTH = 384; // w-96
+    const CARD_GAP = 32; // gap-8
+    const AUTO_SCROLL_STEP = 2;
+    const maxScroll = (CARD_WIDTH + CARD_GAP) * highlights.length;
+    function step() {
+      if (!running || !container) return;
+      container.scrollLeft += AUTO_SCROLL_STEP;
+      if (container.scrollLeft >= maxScroll) {
+        container.scrollLeft = 0;
+      }
+      animationFrame = requestAnimationFrame(step);
+    }
+    animationFrame = requestAnimationFrame(step);
+    return () => {
+      running = false;
+      if (animationFrame) cancelAnimationFrame(animationFrame);
+    };
+  }, [highlights.length]);
 
   return (
     <div className="min-h-screen">
@@ -204,8 +231,9 @@ export function Home() {
                 <span className="text-white">Solomon Agyire</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mb-8">
-              A passionate computer science student at Alabama A&M University with a drive for building innovative solutions that positively impact lives. 
-              I enjoy creating scalable applications and AI-driven tools. Inspired by technology's ability to connect and empower, I strive to make a difference through meaningful projects and collaborations.
+              A computer science student at Alabama A&M University with a drive for building innovative solutions that positively impact lives. 
+              I enjoy creating scalable applications and AI-driven tools. I am Inspired by technology's ability to connect and empower people.
+              Let's connect and build something amazing together!
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <Link
@@ -238,6 +266,35 @@ export function Home() {
         </div>
       </div>
 
+      {/* Highlights Section */}
+      <section className="py-8">
+        <h2 className="text-3xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+          Highlights
+        </h2>
+        <div
+          ref={highlightsRef}
+          className="flex gap-8 overflow-x-auto scrollbar-hide justify-start"
+          style={{
+            scrollBehavior: 'auto',
+            width: '100%',
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'none'
+          }}
+        >
+          {highlights.concat(highlights).concat(highlights).map((item, idx) => (
+            <div
+              key={idx}
+              className="flex-shrink-0 w-96 h-80 bg-white/5 rounded-xl border border-white/10 shadow-lg flex flex-col items-center justify-end overflow-hidden"
+            >
+              <img src={item.image} alt={item.text} className="w-full h-64 object-cover rounded-t-xl mb-0 font-bold" style={{ fontWeight: 700 }} />
+              <div className="w-full text-white text-center font-bold text-lg py-3 bg-gradient-to-t from-black/70 to-transparent">
+                {item.text}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Featured Projects Section */}
       <section id="featured" className="py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black"></div>
@@ -247,7 +304,15 @@ export function Home() {
               Featured Projects
             </span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            className="flex gap-8 overflow-x-auto scrollbar-hide justify-start"
+            style={{
+              scrollBehavior: 'auto',
+              width: '100%',
+              msOverflowStyle: 'none',
+              scrollbarWidth: 'none'
+            }}
+          >
             {projects.map((project) => (
               <div
                 key={project.id}
@@ -406,7 +471,7 @@ export function Home() {
               Leadership
             </span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {leadershipRoles.map((role) => (
               <a
                 href={role.link}

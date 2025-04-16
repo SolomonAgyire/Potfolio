@@ -59,7 +59,7 @@ export function About() {
                 <div className="relative lg:w-1/3">
                   <div className="aspect-square rounded-2xl overflow-hidden border-2 border-white/10">
                     <img
-                      src="/img/King.jpg"
+                      src="/img/Headshot.jpg"
                       alt="Profile"
                       className="w-full h-full object-cover"
                     />
@@ -80,24 +80,24 @@ export function About() {
                       About Me
                     </span>
                   </h1>
-                  <div className="space-y-4 text-gray-300">
-                    <p className="text-lg leading-relaxed">
+                  <div className="space-y-6 text-gray-300">
+                    <p className="text-lg text-justify">
                       Hello! I'm Solomon Agyire. I am originally from Bogoso, Ghana. I am currently a Computer Science student at Alabama A&M University 
                       with a passion for leveraging technology to solve real-world problems and improve lives.
                     </p>
                     
-                    <p className="text-lg leading-relaxed">
+                    <p className="text-lg text-justify">
                       My journey into tech was inspired by witnessing its transformative impact, from enabling 
                       seamless global communication to driving data-driven decisions and innovation in critical 
                       areas like healthcare and disaster relief.
                     </p>
                     
-                    <p className="text-lg leading-relaxed">
+                    <p className="text-lg text-justify">
                       When I'm not coding, you'll find me staying connected with my roots, exploring comedy 
                       shows, or finding ways to enhance my personal and professional growth.
                     </p>
 
-                    <p className="text-lg leading-relaxed">
+                    <p className="text-lg text-justify">
                       Currently, I'm focused on improving my skills as well as staying on top of other modern technologies. I believe in writing clean, maintainable code
                       that scales with your business needs.
                     </p>

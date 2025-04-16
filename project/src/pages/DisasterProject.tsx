@@ -42,7 +42,7 @@ export function DisasterProject() {
                 >
                     <div className="relative h-[400px] mx-auto max-w-4xl overflow-hidden">
                         <img 
-                            src="/img/Disasteranalysis.jpg"
+                            src="/Highlights/Disasteranalysis.jpg"
                             alt="Disaster Analysis Application"
                             className="w-full h-full object-contain"
                         />
