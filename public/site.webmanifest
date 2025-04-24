@@ -1,0 +1,19 @@
+{
+  "name": "Solomon Agyire Portfolio",
+  "short_name": "Solomon Agyire",
+  "icons": [
+    {
+      "src": "/img/Headshot.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/img/Headshot.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    }
+  ],
+  "theme_color": "#1a1a2e",
+  "background_color": "#1a1a2e",
+  "display": "standalone"
+} 

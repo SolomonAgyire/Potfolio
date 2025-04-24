@@ -59,7 +59,7 @@ export function About() {
                 <div className="relative lg:w-1/3">
                   <div className="aspect-square rounded-2xl overflow-hidden border-2 border-white/10">
                     <img
-                      src="/img/King.jpg"
+                      src="/img/Headshot.jpg"
                       alt="Profile"
                       className="w-full h-full object-cover"
                     />
