@@ -3,6 +3,7 @@ import { ArrowRight, ChevronDown, Award, ExternalLink, Github, Code, Sparkles } 
 import { Link } from 'react-router-dom';
 import type { Project, Achievement, Leadership } from '../types';
 import { useRef, useEffect } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 export function Home() {
   const projects: Project[] = [
@@ -31,7 +32,7 @@ export function Home() {
       image: "/img/chrome extension.jpg",
       technologies: ["Javascript", "Chrome Extension API", "HTML", "CSS"],
       link: "https://github.com/SolomonAgyire/Chrome-Extension-",
-      preview: "#"
+      preview: "https://chromewebstore.google.com/detail/fjopbkonccdaejllhfhfnopdicgbennm?utm_source=item-share-cb"
     }
   ];
 
@@ -299,24 +300,26 @@ export function Home() {
       <section id="featured" className="py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-12">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl lg:text-5xl font-bold text-center mb-12"
+          >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
               Featured Projects
             </span>
-          </h2>
-          <div
-            className="flex gap-8 overflow-x-auto scrollbar-hide justify-start"
-            style={{
-              scrollBehavior: 'auto',
-              width: '100%',
-              msOverflowStyle: 'none',
-              scrollbarWidth: 'none'
-            }}
-          >
-            {projects.map((project) => (
-              <div
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
                 key={project.id}
-                className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-colors"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="aspect-video overflow-hidden">
                   <img
@@ -361,7 +364,7 @@ export function Home() {
                     )}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -371,15 +374,25 @@ export function Home() {
       <section id="hackathons" className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black to-gray-900"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-20">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl lg:text-5xl font-bold text-center mb-20"
+          >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
               Hackathons
             </span>
-          </h2>
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {hackathons.map((project) => (
-              <div
+            {hackathons.map((project, index) => (
+              <motion.div
                 key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="aspect-video overflow-hidden">
@@ -427,7 +440,7 @@ export function Home() {
                     )}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -436,15 +449,25 @@ export function Home() {
       {/* Achievements Section */}
       <section className="py-12 relative overflow-hidden bg-black">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-12">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl lg:text-5xl font-bold text-center mb-12"
+          >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
               Achievements
             </span>
-          </h2>
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {achievements.map((achievement) => (
-              <div
+            {achievements.map((achievement, index) => (
+              <motion.div
                 key={achievement.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-colors"
               >
                 <div className="flex items-start gap-4">
@@ -457,7 +480,7 @@ export function Home() {
                     <p className="text-gray-400">{achievement.description}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -466,18 +489,28 @@ export function Home() {
       {/* Leadership Section */}
       <section className="py-12 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-center mb-12">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl lg:text-5xl font-bold text-center mb-12"
+          >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
               Leadership
             </span>
-          </h2>
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {leadershipRoles.map((role) => (
-              <a
+            {leadershipRoles.map((role, index) => (
+              <motion.a
                 href={role.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={role.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="flex flex-col gap-4">
@@ -498,7 +531,7 @@ export function Home() {
                     <ExternalLink className="h-5 w-5 text-purple-400" />
                   </div>
                 </div>
-              </a>
+              </motion.a>
             ))}
           </div>
         </div>
