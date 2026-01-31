@@ -8,7 +8,12 @@
   }
 
   body {
-    @apply bg-gray-900 text-white;
+    @apply bg-slate-900 text-slate-200 antialiased;
+  }
+
+  /* Section anchors account for fixed nav */
+  section[id] {
+    scroll-margin-top: 5rem;
   }
 }
 
@@ -18,45 +23,36 @@
   }
 
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
+    @apply bg-teal-600 text-white hover:bg-teal-500;
   }
 
   .section-title {
-    @apply text-3xl font-bold text-white mb-8;
+    @apply text-2xl font-bold text-slate-100 tracking-tight;
   }
 }
 
 @layer utilities {
-  .animate-gradient-xy {
-    background-size: 400% 400%;
-    animation: gradient-xy 15s ease infinite;
+  .fade-in {
+    animation: fadeIn 0.4s ease-out;
   }
-
-  @keyframes gradient-xy {
-    0% {
-      background-position: 0% 0%;
-    }
-    50% {
-      background-position: 100% 100%;
-    }
-    100% {
-      background-position: 0% 0%;
-    }
-  }
-}
-
-/* Animation classes */
-.fade-in {
-  animation: fadeIn 0.5s ease-in;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Hide scrollbar for highlights carousel */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

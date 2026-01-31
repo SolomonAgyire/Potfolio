@@ -21,16 +21,14 @@ export function DisasterProject() {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black py-24">
+        <div className="py-16 lg:py-24 bg-slate-900 border-t border-slate-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.h1 
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-4xl lg:text-5xl font-bold text-center mb-16"
+                    className="text-3xl lg:text-4xl font-bold text-slate-100 text-center mb-12"
                 >
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-                        Real-Time Disaster Analysis
-                    </span>
+                    Real-Time Disaster Analysis
                 </motion.h1>
 
                 {/* Project Showcase */}
@@ -38,7 +36,7 @@ export function DisasterProject() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 mb-12"
+                    className="relative bg-slate-800/50 rounded-lg overflow-hidden border border-slate-700 mb-12"
                 >
                     <div className="relative h-[400px] mx-auto max-w-4xl overflow-hidden">
                         <img 
@@ -50,14 +48,14 @@ export function DisasterProject() {
                     </div>
                     <div className="p-8">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                            <div className="text-lg text-gray-300">
+                            <div className="text-lg text-slate-400">
                                 A real-time disaster analysis system that processes tweets to provide immediate relief information.
                             </div>
                             <a
                                 href="https://huggingface.co/spaces/CephasAldrich/Post_Disaster_Relief"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white hover:opacity-90 transition-all duration-300"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 rounded-lg text-white hover:bg-teal-500 transition-colors"
                             >
                                 <span>Visit Live Model</span>
                                 <ExternalLink className="h-5 w-5" />
@@ -74,11 +72,11 @@ export function DisasterProject() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 + index * 0.1 }}
-                            className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"
+                            className="bg-slate-800/50 rounded-lg p-6 border border-slate-700 hover:border-slate-600 transition-colors"
                         >
-                            <feature.icon className="h-8 w-8 text-purple-400 mb-4" />
-                            <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                            <p className="text-gray-400">{feature.description}</p>
+                            <feature.icon className="h-8 w-8 text-teal-400 mb-4" />
+                            <h3 className="text-xl font-semibold text-slate-100 mb-2">{feature.title}</h3>
+                            <p className="text-slate-400">{feature.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -88,10 +86,10 @@ export function DisasterProject() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10"
+                    className="bg-slate-800/50 rounded-lg p-8 border border-slate-700"
                 >
-                    <h2 className="text-2xl font-semibold text-white mb-6">Technical Implementation</h2>
-                    <div className="space-y-4 text-gray-300">
+                    <h2 className="text-2xl font-semibold text-slate-100 mb-6">Technical Implementation</h2>
+                    <div className="space-y-4 text-slate-400">
                         <p>
                             Built using Python and TensorFlow for the machine learning backend, 
                             this project leverages natural language processing to analyze disaster-related 
@@ -108,7 +106,7 @@ export function DisasterProject() {
                                 href="https://drive.google.com/file/d/1V4KrnkAwwAjEjHDP_PvmR8jc1uRNX3ud/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm rounded-xl text-white hover:bg-white/20 transition-all duration-300 border border-white/10"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg text-slate-200 hover:bg-slate-700 transition-colors border border-slate-600"
                             >
                                 <span>Read Documentation</span>
                                 <svg 
